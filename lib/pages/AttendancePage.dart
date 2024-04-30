@@ -7,27 +7,20 @@ class AttendancePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
       appBar: AppBar(
-        backgroundColor: Colors.blue[900], // Set the app bar color to dark blue
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            GestureDetector(
-              onTap: () {
-                Get.to(HomePage());
-              },
-              child: Padding(
-                padding: EdgeInsets.only(right: 16),
-                child: Text(
-                  'رجوع',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
+        backgroundColor: Colors.grey,
+        elevation: 0,
+        title: Text('مسح بطاقة NFC', style: TextStyle(color: Colors.white)),
+        centerTitle: true,
+        actions: [
+          GestureDetector(
+            child: Text('رجوع', style: TextStyle(color: Colors.white)),
+            onTap: () {
+              Get.to(HomePage());
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: EdgeInsets.all(16),
