@@ -43,11 +43,15 @@ class _NFCReaderPageState extends State<NFCReaderPage> {
         title: Text('مسح بطاقة NFC', style: TextStyle(color: Colors.white)),
         centerTitle: true,
         actions: [
-          IconButton(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {
-              Get.to(HomePage());
-            },
+          Padding(
+            padding: EdgeInsets.only(right: 16),
+            child: GestureDetector(
+              child: Text('رجوع',
+                  style: TextStyle(color: Colors.white, fontSize: 20)),
+              onTap: () {
+                Get.to(HomePage());
+              },
+            ),
           ),
         ],
       ),
