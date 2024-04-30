@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:nfc_attendance/pages/signin_page2.dart';
 
 class signin_page1 extends StatelessWidget {
   signin_page1({super.key});
@@ -29,7 +31,10 @@ class signin_page1 extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      print('Login button pressed');
+                      Get.to(signin_page2(
+                        isStudent: true,
+                      ));
+                      ;
                     },
                     child: Text(
                       'الطلاب',
@@ -44,7 +49,11 @@ class signin_page1 extends StatelessWidget {
                   SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: () {
-                      print('Register button pressed');
+                      Get.to(
+                        signin_page2(
+                          isStudent: false,
+                        ),
+                      );
                     },
                     child: Text(
                       'اعضاء هيئة التدريس',

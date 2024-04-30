@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
-class signin_page2 extends StatelessWidget {
-  const signin_page2({Key? key}) : super(key: key);
+class signin_page2 extends StatefulWidget {
+  const signin_page2({Key? key, required this.isStudent}) : super(key: key);
+  final bool isStudent;
+  @override
+  State<signin_page2> createState() => _signin_page2State();
+}
 
+class _signin_page2State extends State<signin_page2> {
   @override
   Widget build(BuildContext context) {
+    print(widget.isStudent);
     final bool isSmallScreen = MediaQuery.of(context).size.width < 600;
 
     return Scaffold(

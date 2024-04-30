@@ -10,6 +10,8 @@ dependencies:
   flutter_svg: ^2.0.10+1
   smooth_page_indicator: ^1.1.0
   intl: ^0.19.0
+  flutter_nfc_kit: ^3.4.1
+  get: ^4.6.6
 
 
 dev_dependencies: 
