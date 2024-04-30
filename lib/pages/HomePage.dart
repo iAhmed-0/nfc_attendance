@@ -1,5 +1,3 @@
-import 'dart:indexed_db';
-
 import 'package:flutter/material.dart';
 import 'package:nfc_attendance/pages/AttendancePage.dart';
 import 'package:nfc_attendance/widgets/SubjectWidget.dart';

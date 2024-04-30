@@ -38,21 +38,29 @@ class _NFCReaderPageState extends State<NFCReaderPage> {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey,
         elevation: 0,
         title: Text('مسح بطاقة NFC', style: TextStyle(color: Colors.white)),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Get.to(HomePage());
+            },
+          ),
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Expanded(
             child: Center(
-              child: Image.asset(''), // Your NFC icon/image asset
+              child: Image.asset('assets/images/nfc1.png'),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(5.0),
             child: Text(
               _nfcData,
               style: TextStyle(color: Colors.white, fontSize: 18),
@@ -66,16 +74,8 @@ class _NFCReaderPageState extends State<NFCReaderPage> {
             onPressed: startNFCScan,
             child: Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0),
+                  const EdgeInsets.symmetric(horizontal: 35.0, vertical: 20.0),
               child: Text('دوس للتأكيد', style: TextStyle(fontSize: 20)),
-            ),
-          ),
-          SizedBox(height: 20),
-          InkWell(
-            onTap: _onTap,
-            child: Text(
-              'رجوع',
-              style: TextStyle(color: Colors.black, fontSize: 18),
             ),
           ),
         ],
